@@ -24,9 +24,9 @@ In addition, an **interactive web-based graphical interface (GUI)** built with *
 
 | Rank | Algorithm | Test $R^2$ Score | RMSE (tonnes/ha) | MAE (tonnes/ha) | 5-Fold CV $R^2$ (Mean ± Std) | Hyperparameter Notes |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
-| | **Polynomial Regression** | **0.9900** | **89.4538** | 9.5657 | **0.9576 ± 0.0429** | Degree=2, OLS Fit |
-| | **Random Forest Regressor** | **0.9890** | **93.8497** | **7.2289** | **0.9575 ± 0.0575** | `max_depth=20, n_est=100, split=2` |
-| | **Gradient Boosting Regressor**| 0.9881 | 97.6690 | 9.1121 | — | `learning_rate=0.1, depth=5, n_est=200` |
+| 1 | **Polynomial Regression** | **0.9900** | **89.4538** | 9.5657 | **0.9576 ± 0.0429** | Degree=2, OLS Fit |
+| 2 | **Random Forest Regressor** | **0.9890** | **93.8497** | **7.2289** | **0.9575 ± 0.0575** | `max_depth=20, n_est=100, split=2` |
+| 3 | **Gradient Boosting Regressor**| 0.9881 | 97.6690 | 9.1121 | — | `learning_rate=0.1, depth=5, n_est=200` |
 | 4 | **Decision Tree Regressor** | 0.9754 | 140.4837 | 10.0405 | — | `max_depth=10` |
 | 5 | **K-Nearest Neighbors Regressor**| 0.9109 | 267.2388 | 17.1790 | — | `k=5`, Euclidean metric |
 | 6 | **ElasticNet Regression** | 0.8075 | 392.7028 | 67.6115 | — | $\alpha=0.001, l_1=0.5$ |
