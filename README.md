@@ -72,21 +72,7 @@ In addition, an **interactive web-based graphical interface (GUI)** built with *
 | **Agglomerative Hierarchical** | $k=4$, Ward Linkage | 0.2670 | 0.9245 | 120.1315 | $C_0: 281, C_1: 5, C_2: 153, C_3: 1$ |
 | **K-Means (log1p Transformed)** | $k=5$, Log + Scaler | 0.1916 | 1.4843 | 118.0005 | Comparison baseline |
 
----
 
-## Local Setup & Execution Guide
-
-### Prerequisites
-- Python 3.10, 3.11, or 3.12+ (tested up to 3.13)
-- `pip` package manager
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/[your-username]/capstone-ml-platform.git
-cd capstone-ml-platform
-```
-
-Academic Integrity & Verification Guarantee
 All metrics and figures displayed in the GUI platform are generated directly from the identical data splits, random seeds (`random_state=42`), and preprocessing pipelines demonstrated in the submission notebooks.
 Zero metrics are fabricated or hallucinated.
 
