@@ -1,4 +1,4 @@
-# 🧬 CyberPulse ML // Machine Learning Capstone Project
+#Machine Learning Capstone Project
 ### Course: 23CSE301 Machine Learning — B.Tech. Computer Science and Engineering
 **Academic Year 2026-27 | Review 1 & Review 2 Deliverables + Bonus Opportunities**
 
