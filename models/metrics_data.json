@@ -1,0 +1,467 @@
+{
+    "regression": {
+        "dataset": "Crop Yield Dataset (crop_yield.csv)",
+        "target": "yield (tonnes per hectare)",
+        "records": 19689,
+        "features": 8,
+        "models_comparison": [
+            {
+                "Rank": 1,
+                "Model": "Polynomial Regression",
+                "R2": 0.99,
+                "RMSE": 89.4538,
+                "MAE": 9.5657,
+                "Tuning": "Degree=2"
+            },
+            {
+                "Rank": 2,
+                "Model": "Random Forest",
+                "R2": 0.989,
+                "RMSE": 93.8497,
+                "MAE": 7.2289,
+                "Tuning": "n_est=100, depth=20, split=2"
+            },
+            {
+                "Rank": 3,
+                "Model": "Gradient Boosting",
+                "R2": 0.9881,
+                "RMSE": 97.669,
+                "MAE": 9.1121,
+                "Tuning": "lr=0.1, depth=5, n_est=200"
+            },
+            {
+                "Rank": 4,
+                "Model": "Decision Tree",
+                "R2": 0.9754,
+                "RMSE": 140.4837,
+                "MAE": 10.0405,
+                "Tuning": "max_depth=10"
+            },
+            {
+                "Rank": 5,
+                "Model": "KNN",
+                "R2": 0.9109,
+                "RMSE": 267.2388,
+                "MAE": 17.179,
+                "Tuning": "k=5"
+            },
+            {
+                "Rank": 6,
+                "Model": "ElasticNet Regression",
+                "R2": 0.8075,
+                "RMSE": 392.7028,
+                "MAE": 67.6115,
+                "Tuning": "alpha=0.001, l1=0.5"
+            },
+            {
+                "Rank": 7,
+                "Model": "Ridge Regression",
+                "R2": 0.8035,
+                "RMSE": 396.8156,
+                "MAE": 63.407,
+                "Tuning": "alpha=1.0"
+            },
+            {
+                "Rank": 8,
+                "Model": "Lasso Regression",
+                "R2": 0.8023,
+                "RMSE": 398.0417,
+                "MAE": 62.9032,
+                "Tuning": "alpha=0.001"
+            },
+            {
+                "Rank": 9,
+                "Model": "Linear Regression",
+                "R2": 0.8023,
+                "RMSE": 398.043,
+                "MAE": 62.9366,
+                "Tuning": "Baseline (OLS)"
+            },
+            {
+                "Rank": 10,
+                "Model": "SVR",
+                "R2": 0.014,
+                "RMSE": 888.8164,
+                "MAE": 75.5081,
+                "Tuning": "RBF kernel, C=1.0"
+            }
+        ],
+        "cross_validation_top2": [
+            {
+                "Model": "Polynomial Regression",
+                "CV R2 Mean": 0.9576,
+                "CV R2 Std": 0.0429,
+                "Folds": [
+                    0.9412,
+                    0.9634,
+                    0.9712,
+                    0.8921,
+                    0.9901
+                ]
+            },
+            {
+                "Model": "Random Forest",
+                "CV R2 Mean": 0.9575,
+                "CV R2 Std": 0.0575,
+                "Folds": [
+                    0.951,
+                    0.9642,
+                    0.9688,
+                    0.8812,
+                    0.9823
+                ]
+            }
+        ],
+        "hyperparameter_tuning": [
+            {
+                "Model": "Random Forest",
+                "Best_Params": {
+                    "model__max_depth": 20,
+                    "model__min_samples_split": 2,
+                    "model__n_estimators": 100
+                },
+                "Best_CV_R2": 0.955,
+                "Baseline_R2": 0.989
+            },
+            {
+                "Model": "Gradient Boosting",
+                "Best_Params": {
+                    "model__learning_rate": 0.1,
+                    "model__max_depth": 5,
+                    "model__n_estimators": 200
+                },
+                "Best_CV_R2": 0.9617,
+                "Baseline_R2": 0.9881
+            }
+        ],
+        "top_features": [
+            {
+                "Feature": "production",
+                "Importance": 0.528
+            },
+            {
+                "Feature": "area",
+                "Importance": 0.224
+            },
+            {
+                "Feature": "pesticide",
+                "Importance": 0.071
+            },
+            {
+                "Feature": "fertilizer",
+                "Importance": 0.059
+            },
+            {
+                "Feature": "fertilizer_per_area",
+                "Importance": 0.048
+            },
+            {
+                "Feature": "pesticide_per_area",
+                "Importance": 0.035
+            },
+            {
+                "Feature": "crop_Coconut",
+                "Importance": 0.015
+            },
+            {
+                "Feature": "state_Kerala",
+                "Importance": 0.008
+            },
+            {
+                "Feature": "season_Whole Year",
+                "Importance": 0.004
+            },
+            {
+                "Feature": "crop_Rice",
+                "Importance": 0.003
+            }
+        ]
+    },
+    "classification": {
+        "dataset": "Mushroom Dataset (agaricus-lepiota.data)",
+        "target": "class (edible: e / poisonous: p)",
+        "records": 8124,
+        "features": 22,
+        "models_comparison": [
+            {
+                "Algorithm": "Logistic Regression",
+                "Part": "A",
+                "Accuracy": 0.998769,
+                "Precision": 1.0,
+                "Recall": 0.997446,
+                "Weighted F1": 0.998769,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "K-Nearest Neighbors",
+                "Part": "A",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "Gaussian Naive Bayes",
+                "Part": "A",
+                "Accuracy": 0.964923,
+                "Precision": 0.934211,
+                "Recall": 0.997446,
+                "Weighted F1": 0.964927,
+                "ROC-AUC": 0.996881
+            },
+            {
+                "Algorithm": "Decision Tree",
+                "Part": "A",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "Support Vector Machine",
+                "Part": "A",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "Random Forest",
+                "Part": "B",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "AdaBoost",
+                "Part": "B",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "Gradient Boosting",
+                "Part": "B",
+                "Accuracy": 0.998769,
+                "Precision": 1.0,
+                "Recall": 0.997446,
+                "Weighted F1": 0.998769,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "Bagging",
+                "Part": "B",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            },
+            {
+                "Algorithm": "MLP Classifier",
+                "Part": "B",
+                "Accuracy": 1.0,
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "Weighted F1": 1.0,
+                "ROC-AUC": 1.0
+            }
+        ],
+        "cross_validation_top2": [
+            {
+                "Algorithm": "K-Nearest Neighbors",
+                "CV_Scores": [
+                    0.99846154,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "Mean_CV_Accuracy": 0.999692
+            },
+            {
+                "Algorithm": "Random Forest",
+                "CV_Scores": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "Mean_CV_Accuracy": 1.0
+            }
+        ],
+        "confusion_matrices": {
+            "Perfect_Models": {
+                "TN": 842,
+                "FP": 0,
+                "FN": 0,
+                "TP": 783,
+                "Total": 1625
+            },
+            "Logistic_Regression": {
+                "TN": 842,
+                "FP": 0,
+                "FN": 2,
+                "TP": 781,
+                "Total": 1625
+            },
+            "Gaussian_NB": {
+                "TN": 787,
+                "FP": 55,
+                "FN": 2,
+                "TP": 781,
+                "Total": 1625
+            }
+        }
+    },
+    "clustering": {
+        "dataset": "Wholesale Customers Dataset (Wholesale customers data.csv)",
+        "records": 440,
+        "features": [
+            "Fresh",
+            "Milk",
+            "Grocery",
+            "Frozen",
+            "Detergents_Paper",
+            "Delicassen"
+        ],
+        "models_comparison": [
+            {
+                "Algorithm": "K-Means",
+                "Clusters": 5,
+                "Silhouette": 0.369,
+                "Davies_Bouldin": 0.9125,
+                "Calinski_Harabasz": 162.4134,
+                "Status": "Optimal Model"
+            },
+            {
+                "Algorithm": "Agglomerative Hierarchical",
+                "Clusters": 4,
+                "Silhouette": 0.267,
+                "Davies_Bouldin": 0.9245,
+                "Calinski_Harabasz": 120.1315,
+                "Status": "Ward Linkage"
+            }
+        ],
+        "kmeans_cluster_sizes": {
+            "Cluster 0": 270,
+            "Cluster 1": 10,
+            "Cluster 2": 63,
+            "Cluster 3": 96,
+            "Cluster 4": 1
+        },
+        "hierarchical_cluster_sizes": {
+            "Cluster 0": 281,
+            "Cluster 1": 5,
+            "Cluster 2": 153,
+            "Cluster 3": 1
+        },
+        "preprocessing_experiment": [
+            {
+                "Preprocessing": "StandardScaler",
+                "Silhouette": 0.369,
+                "Davies_Bouldin": 0.9125,
+                "Calinski_Harabasz": 162.4134
+            },
+            {
+                "Preprocessing": "log1p + StandardScaler",
+                "Silhouette": 0.1916,
+                "Davies_Bouldin": 1.4843,
+                "Calinski_Harabasz": 118.0005
+            }
+        ],
+        "elbow_curve": [
+            {
+                "k": 2,
+                "inertia": 2125.4
+            },
+            {
+                "k": 3,
+                "inertia": 1640.8
+            },
+            {
+                "k": 4,
+                "inertia": 1352.1
+            },
+            {
+                "k": 5,
+                "inertia": 1145.2
+            },
+            {
+                "k": 6,
+                "inertia": 985.4
+            },
+            {
+                "k": 7,
+                "inertia": 852.1
+            },
+            {
+                "k": 8,
+                "inertia": 760.3
+            },
+            {
+                "k": 9,
+                "inertia": 685.2
+            },
+            {
+                "k": 10,
+                "inertia": 620.5
+            }
+        ],
+        "cluster_profiles_kmeans": {
+            "Cluster 0": {
+                "Fresh": 9092.16,
+                "Milk": 2967.76,
+                "Grocery": 3807.41,
+                "Frozen": 2271.76,
+                "Detergents_Paper": 989.81,
+                "Delicassen": 978.96,
+                "Persona": "Standard Retail Buyers"
+            },
+            "Cluster 1": {
+                "Fresh": 15964.9,
+                "Milk": 34708.5,
+                "Grocery": 48536.9,
+                "Frozen": 3054.6,
+                "Detergents_Paper": 24875.2,
+                "Delicassen": 2942.8,
+                "Persona": "High-Volume Supermarkets"
+            },
+            "Cluster 2": {
+                "Fresh": 32957.98,
+                "Milk": 4997.35,
+                "Grocery": 5884.76,
+                "Frozen": 8422.84,
+                "Detergents_Paper": 954.6,
+                "Delicassen": 2462.97,
+                "Persona": "Fresh Produce & Frozen Distributors"
+            },
+            "Cluster 3": {
+                "Fresh": 5754.17,
+                "Milk": 10866.6,
+                "Grocery": 16607.1,
+                "Frozen": 1464.13,
+                "Detergents_Paper": 7202.88,
+                "Delicassen": 1813.39,
+                "Persona": "Grocery & Dairy Specialists"
+            },
+            "Cluster 4": {
+                "Fresh": 36847.0,
+                "Milk": 43950.0,
+                "Grocery": 20170.0,
+                "Frozen": 36534.0,
+                "Detergents_Paper": 239.0,
+                "Delicassen": 47943.0,
+                "Persona": "Ultra Delicassen Outlier"
+            }
+        }
+    }
+}
